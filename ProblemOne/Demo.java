@@ -19,7 +19,7 @@ public class Demo {
         // Test getters and setters
         System.out.println("\nTesting getters and setters:");
 
-        // Person
+        // Person 
         person.setMyName("Jane Doe");
         person.setMyAge(25);
         person.setMyGender("F");

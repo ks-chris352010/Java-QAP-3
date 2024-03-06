@@ -1,9 +1,10 @@
 package ProblemTwo;
 
 class MoveablePoint extends Point {
-    private float xSpeedVal;
-    private float ySpeedVal;
+    private float xSpeedVal; // xSpeed value
+    private float ySpeedVal; // ySpeed value
 
+    // Constructors:
     public MoveablePoint(float x, float y, float xSpeed, float ySpeed) {
         super(x, y); xSpeedVal = xSpeed; ySpeedVal = ySpeed;
     }
@@ -12,6 +13,12 @@ class MoveablePoint extends Point {
         super((float) 0.0, (float) 0.0); xSpeedVal = (float) 0.0; ySpeedVal = (float) 0.0;
     }
 
+    // toString method:
+    public String toString() {
+        return "(" + getxValue() + ", " + getyValue() + "), speed: (" + xSpeedVal + ", " + ySpeedVal + ")";
+    }
+
+    // Getters:
     public float getxSpeedVal() {
         return xSpeedVal;
     }
@@ -20,6 +27,11 @@ class MoveablePoint extends Point {
         return ySpeedVal;
     }
 
+    public float[] getXY() {
+        float[] xy = {xSpeedVal, ySpeedVal}; return xy;
+    }
+
+    // Setters:
     public void setxSpeedVal(float xSpeedVal) {
         this.xSpeedVal = xSpeedVal;
     }
@@ -28,20 +40,14 @@ class MoveablePoint extends Point {
         this.ySpeedVal = ySpeedVal;
     }
 
-    public float[] getXY() {
-        float[] xy = {xSpeedVal, ySpeedVal}; return xy;
-    }
-
     public void setXY(float x, float y) {
         xSpeedVal = x; ySpeedVal = y;
     }
 
-    public String toString() {
-        return "(" + getxValue() + ", " + getyValue() + "), speed: (" + xSpeedVal + ", " + ySpeedVal + ")";
-    }
-
+    // Move method:
     public MoveablePoint move() {
-        setxValue(getxValue()+xSpeedVal);
+        // Increments by speed values:
+        setxValue(getxValue()+xSpeedVal); 
         setyValue(getyValue()+ySpeedVal);
         return this;
     }

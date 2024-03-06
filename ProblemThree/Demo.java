@@ -3,7 +3,7 @@ package ProblemThree;
 
 public class Demo {
     public static void main(String[] args) {
-        // Create an array of Shape objects
+        // Shape array:
         Shape[] shapes = {
             new Ellipse("MyEllipse", 5.0, 3.0),
             new Circle("MyCircle", 4.0),
@@ -11,7 +11,7 @@ public class Demo {
             new EquilateralTriangle("MyEquilateralTriangle", 6.0)
         };
 
-        // Print information about each shape using the overridden toString method
+        // Prints out shape info:
         for (Shape shape : shapes) {
             System.out.println(shape.toString());
         }

@@ -1,15 +1,20 @@
 class Student extends Person {
     protected String myIdNum;    // Student Id Number
-    protected double myGPA;      // grade point average
+    protected double myGPA;      // Grade point average
     
+    // Student constructor:
     public Student(String name, int age, String gender, String idNum, double gpa)  {
-        // use the super class’ constructor
         super(name, age, gender);
-        // initialize what’s new to Student
         myIdNum = idNum;
         myGPA = gpa;
-    }     
+    }  
+    
+    // toString method:
+    public String toString() {
+        return "Student: " + myName + " Age: " + myAge + ", ID: " + myIdNum + ", GPA:" + myGPA;
+    }
 
+    // Getters:
     public String getMyIdNum() {
         return myIdNum;
     }
@@ -18,6 +23,7 @@ class Student extends Person {
         return myGPA;
     }
 
+    // Setters
     public void setMyIdNum(String myIdNum) {
         this.myIdNum = myIdNum;
     }
